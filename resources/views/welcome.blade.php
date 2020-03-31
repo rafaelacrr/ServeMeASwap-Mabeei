@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Serve me a Swap
                 </div>
 
                 <div class="links">
