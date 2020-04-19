@@ -49661,8 +49661,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/alves-luis/Documents/lei/mabeei/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/alves-luis/Documents/lei/mabeei/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/rafaela/Desktop/Serve_me_a_swap/mabeei/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/rafaela/Desktop/Serve_me_a_swap/mabeei/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

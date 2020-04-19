@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use Arr;
 
 class RegisterController extends Controller
@@ -68,13 +69,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+      $user = DB::transaction(function () use ($data) {
+          $user = User::make([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone' => Arr::get($data, 'phone'),
             'phone_indicative' => Arr::get($data, 'phone_indicative'),
             'nif' => Arr::get($data, 'nif'),
-        ]);
+          ]);
+          $user->save();
+          return $user;
+      });
+
+      return $user;
     }
 }
