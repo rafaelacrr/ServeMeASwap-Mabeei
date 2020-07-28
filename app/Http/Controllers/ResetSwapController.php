@@ -77,7 +77,7 @@ class ResetSwapController extends Controller
     }
 
     protected function deleteSwap($subdomain){
-        $request=Http::delete('http://servemeaswap.com:4000/deploy/'.$subdomain, [
+        $request=Http::delete('http://'.config('app.domain_url').":4000".'/deploy/'.$subdomain, [
             'key' => config('app.opacum_key'),
         ]); 
     }
