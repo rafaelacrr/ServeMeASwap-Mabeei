@@ -118,7 +118,7 @@ class SwapController extends Controller
     $data=DB::table('Swaps')->where('subdomain', '=', $subdomain)->get();
     $courses=DB::table('Courses')->where('swap_subdomain', '=', $subdomain)->get();
     $info=$data[0];
-    $request=HTTP::post('http://servemeaswap.com:4000/deploy/'.$subdomain, [
+    $request=HTTP::post('http://'.config('app.domain_url').":4000".'/deploy/'.$subdomain, [
       'key' => config('app.opacum_key'),
       'mail_domain' => $info->institutional_mail,
       'admin' => ['email'=>$info->email_admin,'password'=>$info->password],
