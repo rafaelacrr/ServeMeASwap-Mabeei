@@ -12,8 +12,18 @@ class Swap extends Model
      * @var array
      */
     protected $fillable = [
-        'institutional_mail', 'subdomain'
+        'institutional_mail', 'subdomain', 'email_format','email_admin', 'password', 'user_id'
     ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password'
+    ];
+
     /**
      * The relations to eager load on every query.
      *
@@ -23,7 +33,7 @@ class Swap extends Model
 
     /**
      * Get admin of this Swap instance.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function administrator()

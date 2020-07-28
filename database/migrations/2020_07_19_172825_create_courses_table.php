@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSwapsTable extends Migration
+class CreateCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateSwapsTable extends Migration
      */
     public function up()
     {
-        Schema::create('swaps', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('email');
-            $table->string('subdomain')->unique();
-            $table->string('institutional_mail');
-
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('administrator_id')->constrained();
+            $table->string('code');
+            $table->string('name');
+            $table->integer('year');
+            $table->integer('semester');
+            $table->string('swap_subdomain');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateSwapsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('swaps');
+        Schema::dropIfExists('courses');
     }
 }

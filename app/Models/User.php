@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     /**
      * Get all Swaps managed by the user.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function swaps()

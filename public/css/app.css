@@ -10891,10 +10891,26 @@ a.text-dark:focus {
 .card-table th {
   padding: 1rem 1.25rem;
   vertical-align: middle;
+  text-align: center;
 }
 
 .card-table .table-active {
   background-color: rgba(247, 247, 249, 0.6);
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 326px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.centered {
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 
 .form-text {
@@ -10918,6 +10934,14 @@ a.text-dark:focus {
   background-color: transparent !important;
 }
 
+label {
+  font-weight: bold;
+}
+
+#subtitle {
+  font-weight: normal;
+}
+
 .card--section {
   border: none;
   background-color: transparent;
@@ -10928,7 +10952,7 @@ a.text-dark:focus {
   padding-bottom: 1.25rem;
   font-weight: lighter;
   font-size: 1.25rem;
-  background-color: transparent;
+  background-color: F8F8F8;
   border-bottom: none;
 }
 
@@ -10944,7 +10968,16 @@ a.text-dark:focus {
 }
 
 .navbar-wrapper {
-  background-color: #3333cc;
+  background-color: #008ae6;
+}
+
+.btn {
+  -moz-column-fill: #99ffcc;
+       column-fill: #99ffcc;
+}
+
+#footer {
+  background-color: #e6faff;
 }
 
 .datepicker .el-date-editor--datetimerange.el-input {
@@ -11259,6 +11292,37 @@ body .el-date-range-picker.has-time {
 }
 
 
+
+#createNewSwap {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#createNewSwap .btn {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.card-swaps {
+  margin-bottom: 20px;
+}
+
+.col-sm-3 {
+  padding-right: 1px;
+  padding-left: 1px;
+  margin-left: 6%;
+}
+
+.noSwaps {
+  -moz-text-align-last: center;
+       text-align-last: center;
+  width: 100%;
+}
+
+.space {
+  margin-bottom: 300px;
+}
 
 body {
   display: flex;

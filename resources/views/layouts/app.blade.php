@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app" class="main-content">
@@ -73,7 +74,7 @@
         </div>
     </div>
 
-    <footer class="main-footer">
+    <footer class="main-footer" id="footer">
         <div class="container">
             <div class="row align-items-center p-4 text-muted small">
                 <div class="col">
@@ -84,8 +85,9 @@
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+      </footer>
+  </div>
+
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>

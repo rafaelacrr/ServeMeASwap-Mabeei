@@ -27,7 +27,7 @@
 
                 {{-- Mobile phone indicative + mobile phone--}}
                 <div class="row">
-                  <div class="form-group col-2">
+                  <div class="form-group col-3">
                       <label for="phone_indicative">Mobile phone indicative</label>
                       <input id="phone_indicative" type="string" class="form-control {{ $errors->has('phone_indicative') ? 'is-invalid' : '' }}" name="phone_indicative" value="{{ old('phone_indicative') }}">
                       <div class="invalid-feedback">{{ $errors->first('phone_indicative') }}</div>

@@ -125,6 +125,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | URL Backend
+    |--------------------------------------------------------------------------
+    |
+    | This is the URL for the backend that allows to create and update a swap
+    |
+    */
+
+    'opacum_url' => env('OPACUM_URL'),
+    'domain_url' => env('DOMAIN_URL'),
+    'opacum_key' => env('OPACUM_KEY'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
