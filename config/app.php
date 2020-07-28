@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Serve me a Swap'),
 
     /*
     |--------------------------------------------------------------------------
@@ -125,6 +125,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | URL Backend
+    |--------------------------------------------------------------------------
+    |
+    | This is the URL for the backend that allows to create and update a swap
+    |
+    */
+
+    'opacum_url' => env('OPACUM_URL'),
+    'domain_url' => env('DOMAIN_URL'),
+    'opacum_key' => env('OPACUM_KEY'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -161,6 +174,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -224,6 +238,7 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'Str' => Illuminate\Support\Str::class,
         'URL' => Illuminate\Support\Facades\URL::class,
+        'Flash' => Laracasts\Flash\Flash::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 

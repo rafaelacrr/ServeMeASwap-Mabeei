@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Swap;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'AuthController@index')->name('homepage');
+Route::get('/home', 'HomeController@index')->name('homepage');
+Route::get('/newSwap', 'HomeController@newSwap')->name('newSwap');
+
+Route::post('/addSwap', 'SwapController@create')->name('addSwap');
+Route::post('/addCourses', 'SwapController@addCourses')->name('addCourses');
+
+Route::get('/validateSubdomain/{subdomain}','SwapController@validateSubdomain')->name('validate');
+
+Route::post('/import_parse', 'CSVFileController@parseImport')->name('import_parse');
+
+
+Route::post('/resetSwap','ResetSwapController@resetSwap')->name('reset');
+Route::get('/resetSwap/{subdomain?}', 'ResetSwapController@index')->name('resetSwap');
+
+Route::get('/deleteSwap/{id}', 'HomeController@deleteSwap')->name('deleteSwap');
+
+Auth::routes();
